@@ -241,7 +241,7 @@ img{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    background-image: linear-gradient(60deg, #29323c 0%, #3b3c36 100%);
+    background-image: linear-gradient(60deg, #29323c 0%, #686868 100%);
     color: white;
 }
 
@@ -285,7 +285,7 @@ img{
 
 #projects .project-img img{
     transition: transform .3s ease;
-    
+
 
     transform-origin: center center;
     will-change: transform;
