@@ -40,6 +40,49 @@ img{
     object-fit: cover;
 }
 
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.section-title span{
+    color: rgb(255,77,0);
+}
+
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+}
+
+.cta:hover{
+    color: white;
+    background-color: black;
+}
+
+.brand h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand h1 span{
+    color: black;
+}
+
 #one{
     background-image: url(./images/one.png);
     background-size: cover;
@@ -94,24 +137,7 @@ img{
     animation-delay: 3s;
 }
 
-.cta{
-    display: inline-block;
-    padding: 10px 30px;
-    color: white;
-    background-color: transparent;
-    border: 2px solid rgb(0, 0, 0);
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    margin-top: 30px;
-    transition: 0.3s ease;
-    transition-property: background-color, color;
-}
 
-.cta:hover{
-    color: white;
-    background-color: black;
-}
 
 #services .services {
     flex-direction: column;
@@ -121,19 +147,7 @@ img{
     padding: 100px 0;
 }
 
-#services .section-title{
-    font-size: 4rem;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    text-align: center;
-}
 
-#services .section-title span{
-    color: rgb(255,77,0);
-}
 
 #services .service-bottom{
     display: flex;
@@ -196,7 +210,7 @@ img{
     padding: 100px 0;
 }
 
-/*START*/
+/*START
 #projects .section-title {
     font-size: 4rem;
     font-weight: 300;
@@ -209,7 +223,7 @@ img{
 #projects .section-title span {
     color: rgb(255,77,0);
 }
-/*END*/
+END*/
 
 #projects .projects-header h1{
     margin-bottom: 50px;
@@ -303,7 +317,7 @@ img{
     padding: 100px 20px;
 }
 
-/*START*/
+/*START
 #about .section-title {
     font-size: 4rem;
     font-weight: 300;
@@ -316,7 +330,7 @@ img{
 #about .section-title span {
     color: rgb(255,77,0);
 }
-/*END*/
+END*/
 
 #about .col-left{
     width: 250px;
@@ -369,7 +383,7 @@ img{
     margin: 0 auto;
 }
 
-/*START*/
+/*START
 #contact .section-title {
     font-size: 4rem;
     font-weight: 300;
@@ -382,7 +396,7 @@ img{
 #contact .section-title span {
     color: rgb(255,77,0);
 }
-/*END*/
+END*/
 
 #contact .contact-items{
     width: 400px;
@@ -425,6 +439,50 @@ img{
     font-weight: 500;
 }
 
+#footer{
+    background-image: linear-gradient(60deg, #0077ff 0%, #485563 100%);
+}
+
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer h2{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+
+#footer .social-item:hover img{
+    filter: grayscale(0);
+}
+
+#footer p{
+    color: white;
+}
+
 
 @keyframes text_reveal_box{
     50%{
@@ -440,5 +498,102 @@ img{
 @keyframes text_reveal {
     100%{
         color: black;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .cta{
+        font-size: 2.3rem;
+        padding: 20px 50px;
+    }
+    h1.section-title{
+        font-size: 5rem;
+    }
+    #one h1{
+        font-size: 6rem;
+    }
+
+    #services .service-bottom .service-item{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    #projects .project-items{
+        flex-direction: row;
+
+    }
+    #projects .project-items:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    #projects .project-items{
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #projects .all-projects .project-info{
+        height: 100%;
+    }
+    #projects .all-projects .project-img{
+        height: 100%;
+    }
+    #about .about{
+        flex-direction: row;
+    }
+    #about .col-left{
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+    #about .about .col-left .about-img::after{
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid #b24c1a;
+    }
+    #about .col-right{
+        text-align: left;
+        padding: 30px;
+    }
+    #about .col-right h1{
+        text-align: left;
+    }
+    #contact .contact{
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+    #contact .contact-items{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    #contact .contact-item{
+        width: 30%;
+        margin: 0;
+        flex-direction: row;
+    }
+    #contact .contact-item .icon{
+        height: 100px;
+        width: 100px;
+    }
+    #contact .contact-item .icon img{
+        object-fit: contain;
+    }
+    #contact .contact-item .contact-info{
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    @media only screen and (min-width: 1200px){
+        #services .service-bottom .service-item{
+            flex-basis: 22%;
+            margin: 1.5%;
+        }
     }
 }
